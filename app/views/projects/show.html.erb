@@ -1,7 +1,7 @@
 <div>
   <div>
     <h1>
-      Title
+      <%= @project.title %>
     </h1>
     <ul>
       <li>Language tag</li>
@@ -12,24 +12,15 @@
     </ul>
   </div>
   <div>
-    <img src="/app/assets/images/black.svg" alt="">
+    <%= image_tag('black.svg', :size => '100x100') %>
   </div>
   <div>
     <h3>
-      Description
+      <%= @project.description %>
     </h3>
   </div>
   <div>
-    <div>
-      <button>
-        Back to menu
-      </button>
-      <button>
-        Previous
-      </button>
-      <button>
-        Next
-      </button>
-    </div>
+    <%= button_to 'Prev', projects_path, :method => 'get' %>
+    <%= button_to 'Next', projects_path, :method => 'get' %>
   </div>
 </div>
